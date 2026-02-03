@@ -73,8 +73,7 @@ function App(){
           className="mb-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate">
           {estSombre ? '☀️' : '🌙'}
         </button>
-          <h1 className="text-2xl font-bold text-slate-800 mb-6 text-center">To-do List</h1>
-
+          <h1 className={`text-2xl font-bold mb-6 text-center transition-colors duration-500 ${estSombre ? 'text-slate-100' : 'text-slate-950'}`}>To-do List</h1>
           <div>
             <div className="flex gap-2 flex-items-center justify-center">
               <input 
@@ -93,7 +92,7 @@ function App(){
             <ul>
               {liste.map((tache, index) => (
                 <li key={index}
-                  className="flex items-center justify-between bg-slate-50 p-3 rounded-lg mb-2 hover:bg-salte-100 transition-colors">
+                  className="flex items-center justify-between bg-slate-50 p-3 rounded-lg mb-2 hover:bg-slte-100 transition-colors">
                   {tache}
                   <button 
                     className="bg-red-600 text-white px-3 py-1 m-0 rounded-lg transition-opacity hover:opacity-80"
