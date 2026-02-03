@@ -19,6 +19,20 @@ function App(){
    * setTexteSaisi  = Nom de la fonction
     * 
    */
+  /**
+   *@todo
+   * Dark mode :
+   * h1
+   * ul padding
+   * bg li
+   * text color li, input
+   * 
+   * bg button
+   * 
+   * App > object
+   * 
+   * 
+   */
 
     const [texteSaisi, setTexteSaisi] = useState("");
     const [liste, setListe]           = useState([]);
