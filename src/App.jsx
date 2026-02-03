@@ -53,10 +53,10 @@ function App(){
   return(
 <div className={`min-h-screen w-full flex items-center justify-center bg-gray-200 transition-colors duration-500 ${estSombre ? 'dark bg-slate-950' : ''}`}>
 
-      <div className="bg-white max-w-md w-full rounded-2xl shadow-x1 p-10">
+      <div className={`max-w-md w-full rounded-2xl shadow-x1 p-10 bg-gray-100 transition-colors duration-500 ${estSombre ? 'dark bg-slate-700' : ''}`}>
         <button
           onClick={() => setEstSombre(!estSombre)}
-          className="mb-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+          className="mb-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate">
           {estSombre ? '☀️' : '🌙'}
         </button>
           <h1 className="text-2xl font-bold text-slate-800 mb-6 text-center">To-do List</h1>
