@@ -23,6 +23,11 @@ function App(){
     const [texteSaisi, setTexteSaisi] = useState("");
     const [liste, setListe]           = useState([]);
 
+    /**
+     *Variable dark mode 
+     */
+    const [estSombre, setEstSombre]   = useState(false);
+
     const ajouterTache = () => {
       setListe([...liste, texteSaisi]);
       setTexteSaisi("");
@@ -46,9 +51,14 @@ function App(){
 
 
   return(
-    <div className="min-h-screen w-full flex items-center justify-center bg-gray-200">
+<div className={`min-h-screen w-full flex items-center justify-center bg-gray-200 transition-colors duration-500 ${estSombre ? 'dark bg-slate-950' : ''}`}>
 
       <div className="bg-white max-w-md w-full rounded-2xl shadow-x1 p-10">
+        <button
+          onClick={() => setEstSombre(!estSombre)}
+          className="mb-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate-800 transition-colors">
+          {estSombre ? '☀️' : '🌙'}
+        </button>
           <h1 className="text-2xl font-bold text-slate-800 mb-6 text-center">To-do List</h1>
 
           <div>
