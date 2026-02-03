@@ -70,7 +70,7 @@ function App(){
       <div className={`max-w-md w-full rounded-2xl shadow-x1 p-10 bg-gray-100 transition-colors duration-500 ${estSombre ? 'dark bg-slate-700' : ''}`}>
         <button
           onClick={() => setEstSombre(!estSombre)}
-          className="mb-4 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-slate">
+          className={`mb-4 p-2 rounded-full bg-gray-100 hover:bg-gray-200 dark:hover:bg-slate ${estSombre ? '' : 'text-slate-350'}`}>
           {estSombre ? '☀️' : '🌙'}
         </button>
           <h1 className={`text-2xl font-bold mb-6 text-center transition-colors duration-500 ${estSombre ? 'text-slate-100' : 'text-slate-950'}`}>To-do List</h1>
@@ -89,7 +89,7 @@ function App(){
                 Ajouter
               </button>
           </div>
-            <ul>
+            <ul className="py-3">
               {liste.map((tache, index) => (
                 <li key={index}
                   className="flex items-center justify-between bg-slate-50 p-3 rounded-lg mb-2 hover:bg-slte-100 transition-colors">
