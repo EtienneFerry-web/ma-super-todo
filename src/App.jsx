@@ -22,11 +22,9 @@ function App(){
   /**
    *@todo
    * Dark mode :
-   * h1
-   * ul padding
+   * text placeholder
    * bg li
    * text color li, input
-   * 
    * bg button
    * 
    * App > object
@@ -81,7 +79,7 @@ function App(){
                 value={texteSaisi}
                 onChange={(e) => setTexteSaisi(e.target.value)} 
                 placeholder="Insérer une tache..."
-                className="flex-1 border-2 border-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+                className="flex-1 border-2 border-slate-200 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 dark:text-white transition-colors"
               />
               <button 
                 className="bg-blue-600 text-white px-4 py-2 rounded-lg transition-opacity hover:opacity-80"
